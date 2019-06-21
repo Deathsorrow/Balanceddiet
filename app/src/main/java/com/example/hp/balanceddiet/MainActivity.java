@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         switch (id) {
             case R.id.nav_collocation:
-                Intent collocation = new Intent(this,collocationActivity.class);
+                Intent collocation = new Intent(this,list.class);
                 startActivity(collocation);
                 break;
             case R.id.nav_recipes:
