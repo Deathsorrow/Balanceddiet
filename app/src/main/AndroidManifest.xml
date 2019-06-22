@@ -22,21 +22,20 @@
         <activity
             android:name=".collocationActivity"
             android:label="食物搭配表"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".recipesActivity"
-            android:label="食谱检索站"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recipesActivity" />
         <activity
             android:name=".shopActivity"
             android:label="购物商城"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".settingActivity"
             android:label="设置"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".list"></activity>
-        <activity android:name=".FoodInfo"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".list" />
+        <activity android:name=".FoodInfo" />
+        <activity android:name=".meirong" />
+        <activity android:name=".meironginfo"></activity>
     </application>
 
 </manifest>

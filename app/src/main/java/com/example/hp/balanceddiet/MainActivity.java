@@ -88,12 +88,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(recipes);
                 break;
             case R.id.nav_shop:
-                Intent shop = new Intent(this,shopActivity.class);
-                startActivity(shop);
+                //Intent shop = new Intent(this,shopActivity.class);
+                //startActivity(shop);
                 break;
             case R.id.nav_setting:
-                Intent setting = new Intent(this,settingActivity.class);
-                startActivity(setting);
+                //Intent setting = new Intent(this,settingActivity.class);
+                //startActivity(setting);
                 break;
         }
 

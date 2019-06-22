@@ -3,16 +3,11 @@ package com.example.hp.balanceddiet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -24,13 +19,6 @@ public class FoodInfo extends AppCompatActivity {
     Button back=null;
     TextView name=null;
     TextView foodinfo=null;
-    private static final String []efood={"黄莲","荞麦","雀肉","豆芽","何首乌","地黄","黄豆","海带","醋"," 红豆 ","半夏","南瓜",
-            "橄榄","板粟","韭菜 ", "鲇鱼","鳗鱼","柿子", "狗肉","鲤鱼","柑橘", "鲤鱼"," 绿豆", "鳖", "鲤鱼", "金针菇",
-            "豆浆","兔肉", "甘草", "麦冬", "荞麦面 ", "富含维生素C的食物", "红枣","黄豆",
-            "梨","柿子","茄子","花生仁 ","石榴 ","香瓜","芹菜","蜂蜜","西红柿","芹菜 ","鸭肉","香瓜","木耳","牛肉","蚕豆","玉米",
-            "地黄 何首乌 白术", "枣", "橘子","木耳", "黄瓜","蚬,蛤,蟹", "牛肉", "豆腐","鳝鱼","黄瓜", "蜂蜜",
-            "糖浆", "白酒", "蜂蜜", "胡萝卜", "酒", "蜂蜜", "竹笋", "皮蛋", "豆腐","韭菜",
-            "钙片","果汁","药物","韭菜","柠檬", "胡萝卜","核桃","啤酒","红薯", "海鲜"};
     private static final String [] efoodinfo={"猪肉多脂，酸寒滑腻。若中药配方中以黄莲为主时，应忌食猪肉，不然会降低药效，且容易引起腹泻。",
             "《食疗本草》 记载：荞麦难消，动热风，不宜多食。由于荞麦面气味甘平而寒，猪肝多脂，两者都是不易消化之物，所以不宜同食。",
             "同食会消化不良。","猪肝中的铜会加速豆芽中的维生素C氧化，失去其营养价值，因此猪肝不宜与豆芽、西红柿、山楂等富含维生素C的食物同食。",
@@ -73,14 +61,9 @@ public class FoodInfo extends AppCompatActivity {
         }
         ListView list = (ListView)findViewById(R.id.lv2);
         SimpleAdapter mSchedule = new SimpleAdapter(
-                this, //没什么解释
-                data,//数据来源
-                R.layout.ex_foodinfo,//ListItem的XML实现
-//动态数组与ListItem对应的子项
+                this, data, R.layout.ex_foodinfo,
                 new String[] {"TextView04","TextView05"},
-                //ListItem的XML文件里面的两个TextView ID
                 new int[] {R.id.TextView04,R.id.TextView05});
-        //添加并且显示
         list.setAdapter(mSchedule);
         int drawable=bundle.getInt("drawable");
         String foodname=bundle.getString("foodname");
@@ -96,7 +79,6 @@ public class FoodInfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Button b=(Button)v;
-                b.setBackgroundResource(R.drawable.btn_back_active);
                 Intent intent=new Intent(FoodInfo.this,list.class);
                 startActivity(intent);
             }

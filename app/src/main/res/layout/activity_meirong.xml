@@ -6,14 +6,14 @@
     tools:context=".list">
 
     <Button
-        android:id="@+id/back"
-        android:onClick="back"
+        android:id="@+id/backp"
+        android:onClick="backp"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/backhome"
-       />
+        android:background="@drawable/backmeirong"
+        tools:ignore="OnClick" />
 
     <TextView
         android:id="@+id/tag"
@@ -21,17 +21,16 @@
         android:background="#388E3C"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="食  物  搭  配  表"
+        android:text="排  毒  养  颜"
         android:textColor="#ffffff"
         android:textSize="25sp"/>
 
     <ListView
-        android:id="@+id/lv"
+        android:id="@+id/lv_meirong"
         android:background="#f1f8e9"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tag"
-        >
+        android:layout_below="@+id/tag">
     </ListView>
 
 </RelativeLayout>

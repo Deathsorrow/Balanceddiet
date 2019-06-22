@@ -1,104 +1,58 @@
 package com.example.hp.balanceddiet;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.internal.NavigationMenuPresenter;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.SimpleAdapter;
 
-public class recipesActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-
-
+public class recipesActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+    private GridView gview;
+    private List<Map<String, Object>> data_list;
+    private SimpleAdapter sim_adapter;
+    private int[] icons = {R.drawable.meirong,R.drawable.jianfei,R.drawable.yangsheng,R.drawable.buru,R.drawable.tiandian,R.drawable.waiguo};
+    private String[] iconName ={"排毒养颜","减肥健身","保健养身","孕产哺乳","甜点饮品","外国美食"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setItemIconTintList(null);
+        gview = (GridView) findViewById(R.id.gview);
+        data_list = new ArrayList<Map<String, Object>>();
+        getData();
+        String [] from ={"image","text"};
+        int [] to = {R.id.image,R.id.text};
+        sim_adapter = new SimpleAdapter(this, data_list, R.layout.item, from, to);
+        gview.setAdapter(sim_adapter);
+        gview.setOnItemClickListener(this);
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    public List<Map<String, Object>> getData(){
+        for(int i=0;i<icons.length;i++){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("image", icons[i]);
+            map.put("text", iconName[i]);
+            data_list.add(map);
         }
+        return data_list;
+    }
+
+    public void back2(View btn){
+        Intent main = new Intent(this,MainActivity.class);
+        startActivity(main);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.nav_collocation:
-                Intent collocation = new Intent(this,collocationActivity.class);
-                startActivity(collocation);
-                break;
-            case R.id.nav_recipes:
-                Intent recipes = new Intent(this,recipesActivity.class);
-                startActivity(recipes);
-                break;
-            case R.id.nav_shop:
-                Intent shop = new Intent(this,shopActivity.class);
-                startActivity(shop);
-                break;
-            case R.id.nav_setting:
-                Intent setting = new Intent(this,settingActivity.class);
-                startActivity(setting);
-                break;
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if(position==0){
+        Intent intent=new Intent(this,meirong.class);
+        startActivity(intent);}
     }
 }

@@ -60,4 +60,5 @@
     <string name="text4">如果你在使用软件的过程中，有任何意见或者建议，欢迎发送邮件到以下邮箱地址，你宝贵的意见对我们持续改进软件质量有很的大帮助。</string>
     <string name="email">mobillionapp@gmail.com</string>
     <string name="middle">不宜同食的食物列表</string>
+    <string name="search_tip">搜索食谱</string>
 </resources>

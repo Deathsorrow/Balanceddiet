@@ -13,9 +13,9 @@
 
 
     <ImageView
-        android:id="@+id/photo"
-        android:layout_width="75dp"
-        android:layout_height="74dp"
+        android:id="@+id/photom"
+        android:layout_width="80dp"
+        android:layout_height="82dp"
         />
 
     <LinearLayout
@@ -24,7 +24,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/itemTitle"
+            android:id="@+id/itemTitlem"
             android:layout_width="match_parent"
             android:layout_height="41dp"
             android:text="@string/app_name"
@@ -32,9 +32,9 @@
             android:drawableRight="@drawable/expand"/>
 
         <TextView
-            android:id="@+id/itemDetail"
+            android:id="@+id/itemDetailm"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="41dp"
             android:text="@string/app_name"
             android:textSize="15sp" />
     </LinearLayout>

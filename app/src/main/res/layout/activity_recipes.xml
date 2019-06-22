@@ -1,26 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:context=".recipesActivity">
 
-    <include
-        layout="@layout/app_bar_recipes"
+    <RelativeLayout
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:background="#4CAF50"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        >
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/back2"
+            android:onClick="back2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backhome"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/tag2"
+            android:layout_width="match_parent"
+            android:background="#388E3C"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="食  谱  检  索  站"
+            android:textColor="#ffffff"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/main_input"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:hint="@string/search_tip"
+            android:lines="1"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:singleLine="true"
+            android:textSize="16sp" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/main_clear_btn"
+            android:layout_width="33dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/main_input"
+            android:layout_alignTop="@+id/main_input"
+            android:layout_alignBottom="@+id/main_input"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/clear" />
+
+        <ImageView
+            android:id="@+id/main_search_btn"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/main_input"
+            android:layout_alignRight="@+id/main_input"
+            android:layout_alignBottom="@+id/main_input"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/search"></ImageView>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gview"
+        android:background="#f1f8e9"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer"
-        app:itemIconTint="@null"/>
+        android:layout_below="@id/top_layout"
+        android:gravity="center_horizontal"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="45dp" >
+    </GridView>
 
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
