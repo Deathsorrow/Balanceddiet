@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,6 @@ import android.widget.TextView;
 public class list extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView  mListView;
-    private List<HashMap<String, String>> listItems;  //存放文字、图片信息
-    private SimpleAdapter listItemAdapter;  //适配器
 
     private static final String[] food = { "猪肉", "猪肝", "猪血", "羊肉", "牛肉", "牛肝", "鹅肉", "兔肉", "狗肉",
             "鸭肉", "鸡肉", "驴肉", "鸡蛋", "鲤鱼", "黄鱼", "虾", "虾皮", "螃蟹", "蛤", "鳖肉",
@@ -132,6 +133,7 @@ public class list extends AppCompatActivity implements AdapterView.OnItemClickLi
         setContentView(R.layout.activity_list);
         mListView=(ListView)findViewById(R.id.lv);
         mListView.setAdapter(new MyBaseAdapter());
+        mListView.setOnItemClickListener(this);
     }
 
     class MyBaseAdapter extends BaseAdapter{
@@ -176,10 +178,13 @@ public class list extends AppCompatActivity implements AdapterView.OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        Intent intent=new Intent(this, FoodInfo.class);
-        //intent.putExtra("data", data);
-//		intent.putCharSequenceArrayListExtra(name, value)("efood", data);
 
+        Intent intent=new Intent();
+        intent.setClass(this, FoodInfo.class);
+        intent.putExtra("drawable", resId[position]);
+        intent.putExtra("foodname", food[position]);
+        intent.putExtra("efoodnema", food1[position]);
+        intent.putExtra("foodinfo", foodjianjie[position]);
         startActivity(intent);
     }
 }
