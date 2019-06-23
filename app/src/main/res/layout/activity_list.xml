@@ -21,7 +21,7 @@
         android:background="#388E3C"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="食  物  搭  配  表"
+        android:text="食  物  相  克  表"
         android:textColor="#ffffff"
         android:textSize="25sp"/>
 

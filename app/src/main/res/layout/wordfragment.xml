@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wordfragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/wistep1"
+                android:background="@drawable/kugua1"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:id="@+id/wstep1"
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="①把苦瓜洗干净后，切成一小段一小段的。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua2"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="②把苦瓜段中的籽掏空后放入锅里加水煮，水煮沸腾后即可捞起，盛盘。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua3"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="③肉末里面加入一个鸡蛋，适量盐、味精、生抽、姜末、葱花、淀粉、料酒和胡椒粉。拌均匀后备用。也可以加入一点香油，味道会更香哦。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua4"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="④把拌好的肉末装入之前备好的苦瓜段里面，然后放入锅里蒸。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua5"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="⑤二十分钟后，即可蒸好出锅。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua6"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="⑥把刚刚蒸苦瓜溢出的汁用小锅盛好，加入适量酱油、白糖、淀粉和少量醋，放到火上，到汁水比较浓稠后即可关火。" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/kugua7"
+                android:layout_width="101dp"
+                android:layout_height="93dp" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="93dp"
+                android:textSize="15sp"
+                android:text="⑦把煮好的汁水均匀淋在之前蒸好的苦瓜肉末上。此道苦瓜醸肉末就完成啦！" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+</FrameLayout>

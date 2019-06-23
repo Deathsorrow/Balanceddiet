@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Balanced diet</string>
+    <string name="app_name">食之有道</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -61,4 +61,7 @@
     <string name="email">mobillionapp@gmail.com</string>
     <string name="middle">不宜同食的食物列表</string>
     <string name="search_tip">搜索食谱</string>
+    <string name="recipesmiddle">具体做法步骤</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

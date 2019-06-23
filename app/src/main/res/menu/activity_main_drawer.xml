@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_collocation"
             android:icon="@drawable/collocation"
-            android:title="食物搭配表" />
+            android:title="食物相克表" />
         <item
             android:id="@+id/nav_recipes"
             android:icon="@drawable/recipes"

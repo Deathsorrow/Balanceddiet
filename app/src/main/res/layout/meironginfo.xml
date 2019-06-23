@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    >
+    tools:context=".meironginfo">
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
@@ -12,13 +14,13 @@
         android:layout_height="wrap_content"
         android:background="#7cb342">
         <Button
-            android:id="@+id/backinfo"
-            android:onClick="backinfo"
-            android:background="@drawable/backp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            ></Button>
+        android:id="@+id/backinfo"
+        android:onClick="backinfo"
+        android:background="@drawable/backp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        tools:ignore="OnClick"></Button>
         <TextView
             android:id="@+id/namemeirong"
             android:layout_width="match_parent"
@@ -59,8 +61,23 @@
         android:layout_width="fill_parent"
         android:layout_height="30dp"
         android:background="#7cb342"
-        android:text="具体做法步骤"
+        android:text="@string/recipesmiddle"
         android:gravity="center_vertical"
         />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyCustomTabLayout"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpmeirong"
+        android:background="#f1f8e9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
 
 </LinearLayout>

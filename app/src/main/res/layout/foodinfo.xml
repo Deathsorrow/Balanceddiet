@@ -10,7 +10,7 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#bbdefb">
+        android:background="#7cb342">
         <Button
             android:id="@+id/backbutton"
             android:onClick="onClick"
@@ -35,7 +35,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#e1f5fe">
+        android:background="#f1f8e9">
         <Button
             android:id="@+id/Button"
             android:layout_width="100dp"
@@ -58,14 +58,14 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="30dp"
-        android:background="#bbdefb"
+        android:background="#7cb342"
         android:text="@string/middle"
         android:gravity="center_vertical"
         />
 
     <ListView
         android:id="@+id/lv2"
-        android:background="#e1f5fe"
+        android:background="#f1f8e9"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:focusable="false">

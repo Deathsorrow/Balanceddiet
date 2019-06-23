@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shanyaoword">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/wistep1"
+                    android:background="@drawable/shanyao1"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:id="@+id/wstep1"
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="①材料洗净后将乌鸡腿切成4块，所有材料分成两份。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao2"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="②把切好的乌鸡腿放入炖盅里，再放入莲子。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao3"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="③山药和枸杞。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao4"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="④加入水分每盅400ML的水。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao5"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑤盖上盖子放入电炖锅里。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao6"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑥电炖锅里放入适量的水，启动电源选择慢炖程序4个小时；炖好后加入少许盐即可食用。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/shanyao7"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑦成品" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

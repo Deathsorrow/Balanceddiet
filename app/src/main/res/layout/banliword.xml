@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".banliword">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/wistep1"
+                    android:background="@drawable/banli1"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:id="@+id/wstep1"
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="①板栗用开水烫一下，并去皮。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli2"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="②鸡脚也用开水烫一下。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli3"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="③清洗干净并去掉脚趾甲。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli4"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="④所有的材料全部放入沙煲中。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli5"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑤放入适量的清水。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli6"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑥7盖好盖子，大火烧开后改小火煲1.5小时左右。" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:background="@drawable/banli7"
+                    android:layout_width="101dp"
+                    android:layout_height="93dp" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="93dp"
+                    android:textSize="15sp"
+                    android:text="⑦调入适量的盐，继续煲10分钟即可。" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
