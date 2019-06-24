@@ -13,7 +13,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table if not exists lol(_id integer primary key autoincrement,name varchar(20))");
         for (int x=0;x<20;x++){
-            db.execSQL("insert into lol(name) values(?)",new String[]{"苦瓜醸肉馅","山药莲子炖乌鸡","板栗百合煲鸡脚"});
+            db.execSQL("insert into lol(name) values(?)",new String[]{"苦瓜"+x});
         }
     }
 
